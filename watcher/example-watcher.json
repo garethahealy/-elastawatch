@@ -1,0 +1,37 @@
+{
+  "trigger": {
+    "schedule": {
+      "interval": "10s"
+    }
+  },
+  "input": {
+    "search": {
+      "request": {
+        "indices": [
+          "logstash-loader"
+        ],
+        "body": {
+          "query": {
+            "match": {
+              "message": "elasticsearchLoad started"
+            }
+          }
+        }
+      }
+    }
+  },
+  "condition": {
+    "compare": {
+      "ctx.payload.hits.total": {
+        "gt": 0
+      }
+    }
+  },
+  "actions": {
+    "log_error": {
+      "logging": {
+        "text": "Found {{ctx.payload.hits.total}} 'elasticsearchLoad started' in the logs"
+      }
+    }
+  }
+}
