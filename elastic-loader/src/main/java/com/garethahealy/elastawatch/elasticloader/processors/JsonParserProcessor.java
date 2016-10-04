@@ -19,6 +19,7 @@
  */
 package com.garethahealy.elastawatch.elasticloader.processors;
 
+import java.time.Instant;
 import java.util.List;
 import java.util.Map;
 
@@ -28,6 +29,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.camel.Exchange;
 import org.apache.camel.Processor;
 import org.joda.time.DateTime;
+
 import org.joda.time.format.DateTimeFormat;
 
 public class JsonParserProcessor implements Processor {
@@ -36,16 +38,21 @@ public class JsonParserProcessor implements Processor {
 
     @Override
     public void process(Exchange exchange) throws Exception {
+        Instant start = Instant.now();
+
         ObjectMapper objectMapper = new ObjectMapper();
         List<Map<String, String>> data = objectMapper.readValue(exchange.getIn().getBody(String.class), TYPE_REF);
         for (Map<String, String> line : data) {
+            //Update the times to be now...
+            start = start.plusSeconds(1);
+            line.put("timeMillis", String.valueOf(start.toEpochMilli()));
+
             DateTime date = new DateTime(Long.parseLong(line.get("timeMillis")));
             String value = DateTimeFormat.forPattern("yyyy-MM-dd'T'HH:mm:ss'Z'").print(date);
 
             line.put("@timestamp", value);
         }
-
-
+        
         exchange.getIn().setBody(data);
     }
 
