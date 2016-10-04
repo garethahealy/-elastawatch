@@ -1,0 +1,254 @@
+[
+  {
+    "timeMillis":1464356273830,
+    "thread":"org.apache.camel.spring.Main.main()",
+    "level":"INFO",
+    "loggerName":"org.springframework.context.support.ClassPathXmlApplicationContext",
+    "message":"Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@594b3c83: startup date [Fri May 27 14:37:53 BST 2016]; root of context hierarchy",
+    "endOfBatch":false,
+    "loggerFqcn":"org.apache.logging.log4j.jcl.Log4jLog"
+  },
+  {
+    "timeMillis":1464356273944,
+    "thread":"org.apache.camel.spring.Main.main()",
+    "level":"INFO",
+    "loggerName":"org.springframework.beans.factory.xml.XmlBeanDefinitionReader",
+    "message":"Loading XML bean definitions from file [/Users/garethah/Documents/github/garethahealy/elastoplast/elastic-loader/target/classes/META-INF/spring/camel-context.xml]",
+    "endOfBatch":false,
+    "loggerFqcn":"org.apache.logging.log4j.jcl.Log4jLog"
+  },
+  {
+    "timeMillis":1464356274599,
+    "thread":"org.apache.camel.spring.Main.main()",
+    "level":"INFO",
+    "loggerName":"org.apache.camel.spring.spi.BridgePropertyPlaceholderConfigurer",
+    "message":"Loading properties file from class path resource [com/garethahealy/elastoplast/elastic-loader/elastic-loader.properties]",
+    "endOfBatch":false,
+    "loggerFqcn":"org.apache.logging.log4j.jcl.Log4jLog"
+  },
+  {
+    "timeMillis":1464356274735,
+    "thread":"org.apache.camel.spring.Main.main()",
+    "level":"INFO",
+    "loggerName":"org.elasticsearch.node",
+    "message":"[Riot] version[2.3.3], pid[1843], build[218bdf1/2016-05-17T15:40:04Z]",
+    "endOfBatch":false,
+    "loggerFqcn":"org.elasticsearch.common.logging.support.AbstractESLogger"
+  },
+  {
+    "timeMillis":1464356274736,
+    "thread":"org.apache.camel.spring.Main.main()",
+    "level":"INFO",
+    "loggerName":"org.elasticsearch.node",
+    "message":"[Riot] initializing ...",
+    "endOfBatch":false,
+    "loggerFqcn":"org.elasticsearch.common.logging.support.AbstractESLogger"
+  },
+  {
+    "timeMillis":1464356274739,
+    "thread":"org.apache.camel.spring.Main.main()",
+    "level":"INFO",
+    "loggerName":"org.elasticsearch.plugins",
+    "message":"[Riot] modules [], plugins [], sites []",
+    "endOfBatch":false,
+    "loggerFqcn":"org.elasticsearch.common.logging.support.AbstractESLogger"
+  },
+  {
+    "timeMillis":1464356274755,
+    "thread":"org.apache.camel.spring.Main.main()",
+    "level":"INFO",
+    "loggerName":"org.elasticsearch.env",
+    "message":"[Riot] using [1] data paths, mounts [[/ (/dev/disk1)]], net usable_space [235.8gb], net total_space [464.7gb], spins? [unknown], types [hfs]",
+    "endOfBatch":false,
+    "loggerFqcn":"org.elasticsearch.common.logging.support.AbstractESLogger"
+  },
+  {
+    "timeMillis":1464356274756,
+    "thread":"org.apache.camel.spring.Main.main()",
+    "level":"INFO",
+    "loggerName":"org.elasticsearch.env",
+    "message":"[Riot] heap size [961.5mb], compressed ordinary object pointers [true]",
+    "endOfBatch":false,
+    "loggerFqcn":"org.elasticsearch.common.logging.support.AbstractESLogger"
+  },
+  {
+    "timeMillis":1464356274757,
+    "thread":"org.apache.camel.spring.Main.main()",
+    "level":"WARN",
+    "loggerName":"org.elasticsearch.env",
+    "message":"[Riot] max file descriptors [10240] for elasticsearch process likely too low, consider increasing to at least [65536]",
+    "endOfBatch":false,
+    "loggerFqcn":"org.elasticsearch.common.logging.support.AbstractESLogger"
+  },
+  {
+    "timeMillis":1464356275700,
+    "thread":"org.apache.camel.spring.Main.main()",
+    "level":"WARN",
+    "loggerName":"org.elasticsearch.bootstrap",
+    "message":"JNA not found. native methods will be disabled.",
+    "endOfBatch":false,
+    "loggerFqcn":"org.elasticsearch.common.logging.support.AbstractESLogger"
+  },
+  {
+    "timeMillis":1464356276102,
+    "thread":"org.apache.camel.spring.Main.main()",
+    "level":"INFO",
+    "loggerName":"org.elasticsearch.node",
+    "message":"[Riot] initialized",
+    "endOfBatch":false,
+    "loggerFqcn":"org.elasticsearch.common.logging.support.AbstractESLogger"
+  },
+  {
+    "timeMillis":1464356276103,
+    "thread":"org.apache.camel.spring.Main.main()",
+    "level":"INFO",
+    "loggerName":"org.elasticsearch.node",
+    "message":"[Riot] starting ...",
+    "endOfBatch":false,
+    "loggerFqcn":"org.elasticsearch.common.logging.support.AbstractESLogger"
+  },
+  {
+    "timeMillis":1464356276108,
+    "thread":"org.apache.camel.spring.Main.main()",
+    "level":"INFO",
+    "loggerName":"org.elasticsearch.transport",
+    "message":"[Riot] publish_address {local[1]}, bound_addresses {local[1]}",
+    "endOfBatch":false,
+    "loggerFqcn":"org.elasticsearch.common.logging.support.AbstractESLogger"
+  },
+  {
+    "timeMillis":1464356276110,
+    "thread":"org.apache.camel.spring.Main.main()",
+    "level":"INFO",
+    "loggerName":"org.elasticsearch.discovery",
+    "message":"[Riot] elasticsearch/Ej3celddRE2fCTAS07Hd2g",
+    "endOfBatch":false,
+    "loggerFqcn":"org.elasticsearch.common.logging.support.AbstractESLogger"
+  },
+  {
+    "timeMillis":1464356276116,
+    "thread":"elasticsearch[Riot][clusterService#updateTask][T#1]",
+    "level":"INFO",
+    "loggerName":"org.elasticsearch.cluster.service",
+    "message":"[Riot] new_master {Riot}{Ej3celddRE2fCTAS07Hd2g}{local}{local[1]}{local=true}, reason: local-disco-initial_connect(master)",
+    "endOfBatch":false,
+    "loggerFqcn":"org.elasticsearch.common.logging.support.AbstractESLogger"
+  },
+  {
+    "timeMillis":1464356276158,
+    "thread":"elasticsearch[Riot][clusterService#updateTask][T#1]",
+    "level":"INFO",
+    "loggerName":"org.elasticsearch.gateway",
+    "message":"[Riot] recovered [0] indices into cluster_state",
+    "endOfBatch":false,
+    "loggerFqcn":"org.elasticsearch.common.logging.support.AbstractESLogger"
+  },
+  {
+    "timeMillis":1464356276183,
+    "thread":"org.apache.camel.spring.Main.main()",
+    "level":"INFO",
+    "loggerName":"org.elasticsearch.http",
+    "message":"[Riot] publish_address {127.0.0.1:9200}, bound_addresses {[fe80::1]:9200}, {[::1]:9200}, {127.0.0.1:9200}",
+    "endOfBatch":false,
+    "loggerFqcn":"org.elasticsearch.common.logging.support.AbstractESLogger"
+  },
+  {
+    "timeMillis":1464356276184,
+    "thread":"org.apache.camel.spring.Main.main()",
+    "level":"INFO",
+    "loggerName":"org.elasticsearch.node",
+    "message":"[Riot] started",
+    "endOfBatch":false,
+    "loggerFqcn":"org.elasticsearch.common.logging.support.AbstractESLogger"
+  },
+  {
+    "timeMillis":1464356276374,
+    "thread":"org.apache.camel.spring.Main.main()",
+    "level":"INFO",
+    "loggerName":"org.apache.camel.spring.CamelContextFactoryBean",
+    "message":"Bridging Camel and Spring property placeholder configurer with id: bridgePropertyPlaceholder",
+    "endOfBatch":false,
+    "loggerFqcn":"org.apache.logging.slf4j.Log4jLogger"
+  },
+  {
+    "timeMillis":1464356276433,
+    "thread":"org.apache.camel.spring.Main.main()",
+    "level":"INFO",
+    "loggerName":"org.apache.camel.impl.converter.DefaultTypeConverter",
+    "message":"Loaded 192 type converters",
+    "endOfBatch":false,
+    "loggerFqcn":"org.apache.logging.slf4j.Log4jLogger"
+  },
+  {
+    "timeMillis":1464356276434,
+    "thread":"org.apache.camel.spring.Main.main()",
+    "level":"INFO",
+    "loggerName":"org.apache.camel.spring.SpringCamelContext",
+    "message":"Apache Camel 2.17.1 (CamelContext: elastoplast-elastic-loader) is starting",
+    "endOfBatch":false,
+    "loggerFqcn":"org.apache.logging.slf4j.Log4jLogger"
+  },
+  {
+    "timeMillis":1464356276435,
+    "thread":"org.apache.camel.spring.Main.main()",
+    "level":"INFO",
+    "loggerName":"org.apache.camel.management.ManagedManagementStrategy",
+    "message":"JMX is enabled",
+    "endOfBatch":false,
+    "loggerFqcn":"org.apache.logging.slf4j.Log4jLogger"
+  },
+  {
+    "timeMillis":1464356276516,
+    "thread":"org.apache.camel.spring.Main.main()",
+    "level":"INFO",
+    "loggerName":"org.apache.camel.impl.DefaultRuntimeEndpointRegistry",
+    "message":"Runtime endpoint registry is in extended mode gathering usage statistics of all incoming and outgoing endpoints (cache limit: 1000)",
+    "endOfBatch":false,
+    "loggerFqcn":"org.apache.logging.slf4j.Log4jLogger"
+  },
+  {
+    "timeMillis":1464356276603,
+    "thread":"org.apache.camel.spring.Main.main()",
+    "level":"INFO",
+    "loggerName":"org.apache.camel.spring.SpringCamelContext",
+    "message":"AllowUseOriginalMessage is enabled. If access to the original message is not needed, then its recommended to turn this option off as it may improve performance.",
+    "endOfBatch":false,
+    "loggerFqcn":"org.apache.logging.slf4j.Log4jLogger"
+  },
+  {
+    "timeMillis":1464356276603,
+    "thread":"org.apache.camel.spring.Main.main()",
+    "level":"INFO",
+    "loggerName":"org.apache.camel.spring.SpringCamelContext",
+    "message":"StreamCaching is not in use. If using streams then its recommended to enable stream caching. See more details at http://camel.apache.org/stream-caching.html",
+    "endOfBatch":false,
+    "loggerFqcn":"org.apache.logging.slf4j.Log4jLogger"
+  },
+  {
+    "timeMillis":1464356276652,
+    "thread":"org.apache.camel.spring.Main.main()",
+    "level":"INFO",
+    "loggerName":"org.apache.camel.spring.SpringCamelContext",
+    "message":"Route: elasticsearchLoad started and consuming from: Endpoint[file:///Users/garethah/Documents/github/garethahealy/elastoplast/elastic-loader/target/json?delay=5s&include=.*%5C.json&initialDelay=1s&readLock=fileLock]",
+    "endOfBatch":false,
+    "loggerFqcn":"org.apache.logging.slf4j.Log4jLogger"
+  },
+  {
+    "timeMillis":1464356276652,
+    "thread":"org.apache.camel.spring.Main.main()",
+    "level":"INFO",
+    "loggerName":"org.apache.camel.spring.SpringCamelContext",
+    "message":"Total 1 routes, of which 1 are started.",
+    "endOfBatch":false,
+    "loggerFqcn":"org.apache.logging.slf4j.Log4jLogger"
+  },
+  {
+    "timeMillis":1464356276653,
+    "thread":"org.apache.camel.spring.Main.main()",
+    "level":"INFO",
+    "loggerName":"org.apache.camel.spring.SpringCamelContext",
+    "message":"Apache Camel 2.17.1 (CamelContext: elastoplast-elastic-loader) started in 0.218 seconds",
+    "endOfBatch":false,
+    "loggerFqcn":"org.apache.logging.slf4j.Log4jLogger"
+  }
+]
