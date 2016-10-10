@@ -1,4 +1,6 @@
 [![Build Status](https://travis-ci.org/garethahealy/elastawatch.svg?branch=master)](https://travis-ci.org/garethahealy/elastawatch)
+[![Release Version](https://img.shields.io/maven-central/v/com.garethahealy.elastawatch/elastawatch-parent.svg?maxAge=2592000)](https://mvnrepository.com/artifact/com.garethahealy.elastawatch/elastawatch-parent)
+[![License](https://img.shields.io/hexpm/l/plug.svg?maxAge=2592000)]()
 
 # elastawatch
 PoC to see how ElasticSearch Watcher works.
