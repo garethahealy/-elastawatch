@@ -22,17 +22,14 @@ package com.garethahealy.elastawatch.elasticloader;
 import java.net.InetAddress;
 
 import org.elasticsearch.client.Client;
-import org.elasticsearch.client.transport.TransportClient;
 import org.elasticsearch.common.settings.Settings;
 import org.elasticsearch.common.transport.InetSocketTransportAddress;
-import org.elasticsearch.node.Node;
-import org.elasticsearch.node.NodeBuilder;
+import org.elasticsearch.transport.client.PreBuiltTransportClient;
 
 public class ElasticSearchClientFactory {
 
     public Client getObject() throws Exception {
-        return TransportClient.builder()
-            .build()
+        return new PreBuiltTransportClient(Settings.EMPTY)
             .addTransportAddress(new InetSocketTransportAddress(InetAddress.getByName("localhost"), 9300));
     }
 }

@@ -31,11 +31,11 @@
     </bean>
 
     <bean id="jsonParserProcessor" class="com.garethahealy.elastawatch.elasticloader.processors.JsonParserProcessor"/>
-
+    
     <bean id="elasticSearchClientFactory" class="com.garethahealy.elastawatch.elasticloader.ElasticSearchClientFactory"/>
     <bean id="esClient" class="org.elasticsearch.client.Client" factory-bean="elasticSearchClientFactory" factory-method="getObject"/>
 
-    <bean id="elasticsearch" class="org.apache.camel.component.elasticsearch.ElasticsearchComponent">
+    <bean id="elastic5" class="org.apache.camel.component.elasticsearch5.ElasticsearchComponent">
         <constructor-arg ref="elastawatch-elastic-loader"/>
         <property name="client" ref="esClient"/>
     </bean>
@@ -51,7 +51,7 @@
             <log loggingLevel="INFO" message="Parsing; ${header.CamelFileName}"/>
             <process ref="jsonParserProcessor"/>
             <log loggingLevel="INFO" message="Parsed; ${body.getClass()} ${body.size()} - ${body}"/>
-            <to uri="elasticsearch://local?operation=BULK_INDEX&amp;indexName=logstash-loader&amp;indexType=log"/>
+            <to uri="elastic5://local?operation=BULK_INDEX&amp;indexName=logstash-loader&amp;indexType=log"/>
         </route>
 
     </camelContext>

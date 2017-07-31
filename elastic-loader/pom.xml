@@ -14,18 +14,12 @@
     <name>GarethHealy :: ElasticSearch with Watcher Plugin :: Elastic Loader</name>
 
     <properties>
-        <lucene.verison>5.5.2</lucene.verison>
+        <lucene.verison>6.4.1</lucene.verison>
         <license.excludes>**/*.json</license.excludes>
     </properties>
 
     <dependencyManagement>
         <dependencies>
-            <dependency>
-                <groupId>org.elasticsearch</groupId>
-                <artifactId>elasticsearch</artifactId>
-                <version>2.4.1</version>
-            </dependency>
-
             <!-- Included Lucene as ElasticSearch was pulling in wrong dependancy versions -->
             <dependency>
                 <groupId>org.apache.lucene</groupId>
@@ -82,32 +76,50 @@
                 <artifactId>lucene-misc</artifactId>
                 <version>${lucene.verison}</version>
             </dependency>
+            <dependency>
+                <groupId>org.apache.lucene</groupId>
+                <artifactId>lucene-grouping</artifactId>
+                <version>${lucene.verison}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.lucene</groupId>
+                <artifactId>lucene-sandbox</artifactId>
+                <version>${lucene.verison}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.lucene</groupId>
+                <artifactId>lucene-spatial-extras</artifactId>
+                <version>${lucene.verison}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.lucene</groupId>
+                <artifactId>lucene-spatial3d</artifactId>
+                <version>${lucene.verison}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
+
 
     <dependencies>
         <dependency>
             <groupId>org.apache.camel</groupId>
+            <artifactId>camel-core</artifactId>
+            <version>2.19.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.camel</groupId>
             <artifactId>camel-spring</artifactId>
+            <version>2.19.1</version>
         </dependency>
         <dependency>
             <groupId>org.apache.camel</groupId>
             <artifactId>camel-jackson</artifactId>
+            <version>2.19.1</version>
         </dependency>
         <dependency>
             <groupId>org.apache.camel</groupId>
-            <artifactId>camel-elasticsearch</artifactId>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.elasticsearch</groupId>
-                    <artifactId>elasticsearch</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-
-        <dependency>
-            <groupId>org.elasticsearch</groupId>
-            <artifactId>elasticsearch</artifactId>
+            <artifactId>camel-elasticsearch5</artifactId>
+            <version>2.19.1</version>
         </dependency>
     </dependencies>
 

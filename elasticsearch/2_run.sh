@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-elasticsearch-2.4.1/bin/elasticsearch
+elasticsearch-5.5.0/bin/elasticsearch

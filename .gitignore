@@ -22,7 +22,5 @@ logs/
 tmp/
 *.tmp
 
-elasticsearch/elasticsearch-2.*
-kibana/kibana-4.*
-
-
+/elasticsearch-5.*
+/kibana-5.*

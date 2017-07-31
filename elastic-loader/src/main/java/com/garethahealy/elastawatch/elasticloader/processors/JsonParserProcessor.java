@@ -55,6 +55,4 @@ public class JsonParserProcessor implements Processor {
         
         exchange.getIn().setBody(data);
     }
-
-
 }
