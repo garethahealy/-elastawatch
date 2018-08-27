@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/garethahealy/elastawatch.svg?branch=master)](https://travis-ci.org/garethahealy/elastawatch)
-[![Coverage](https://sonarqube.com/api/badges/measure?key=com.garethahealy.elastawatch:elastawatch-parent&metric=coverage)](https://sonarcloud.io/dashboard?id=com.garethahealy.elastawatch%3Aelastawatch-parent)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=com.garethahealy.elastawatch:elastawatch-parent&metric=coverage)](https://sonarcloud.io/dashboard?id=com.garethahealy.elastawatch%3Aelastawatch-parent)
 [![Release Version](https://img.shields.io/maven-central/v/com.garethahealy.elastawatch/elastawatch-parent.svg?maxAge=2592000)](https://mvnrepository.com/artifact/com.garethahealy.elastawatch/elastawatch-parent)
 [![License](https://img.shields.io/hexpm/l/plug.svg?maxAge=2592000)]()
 
