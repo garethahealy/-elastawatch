@@ -6,7 +6,7 @@
     <parent>
         <groupId>com.garethahealy.elastawatch</groupId>
         <artifactId>elastawatch-parent</artifactId>
-        <version>6.4.0</version>
+        <version>6.5.0-SNAPSHOT</version>
         <relativePath>../</relativePath>
     </parent>
     <artifactId>elastic-loader</artifactId>
