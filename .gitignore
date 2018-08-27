@@ -166,3 +166,6 @@ buildNumber.properties
 ### Travis
 travis-encrypt.sh
 *.asc
+
+elasticsearch/elasticsearch-6.4.0
+kibana/kibana-6.4.0-darwin-x86_64
