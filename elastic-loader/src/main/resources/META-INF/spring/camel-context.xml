@@ -31,14 +31,6 @@
     </bean>
 
     <bean id="jsonParserProcessor" class="com.garethahealy.elastawatch.elasticloader.processors.JsonParserProcessor"/>
-    
-    <bean id="elasticSearchClientFactory" class="com.garethahealy.elastawatch.elasticloader.ElasticSearchClientFactory"/>
-    <bean id="esClient" class="org.elasticsearch.client.Client" factory-bean="elasticSearchClientFactory" factory-method="getObject"/>
-
-    <bean id="elastic5" class="org.apache.camel.component.elasticsearch5.ElasticsearchComponent">
-        <constructor-arg ref="elastawatch-elastic-loader"/>
-        <property name="client" ref="esClient"/>
-    </bean>
 
     <camelContext id="elastawatch-elastic-loader" xmlns="http://camel.apache.org/schema/spring">
 
@@ -51,7 +43,7 @@
             <log loggingLevel="INFO" message="Parsing; ${header.CamelFileName}"/>
             <process ref="jsonParserProcessor"/>
             <log loggingLevel="INFO" message="Parsed; ${body.getClass()} ${body.size()} - ${body}"/>
-            <to uri="elastic5://local?operation=BULK_INDEX&amp;indexName=logstash-loader&amp;indexType=log"/>
+            <to uri="elasticsearch-rest://elasticsearch?hostAddresses=localhost:9200&amp;operation=BulkIndex&amp;indexName=logstash-loader&amp;indexType=log"/>
         </route>
 
     </camelContext>

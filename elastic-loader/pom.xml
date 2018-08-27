@@ -14,112 +14,33 @@
     <name>GarethHealy :: ElasticSearch with Watcher Plugin :: Elastic Loader</name>
 
     <properties>
-        <lucene.verison>6.4.1</lucene.verison>
         <license.excludes>**/*.json</license.excludes>
     </properties>
 
     <dependencyManagement>
         <dependencies>
-            <!-- Included Lucene as ElasticSearch was pulling in wrong dependancy versions -->
             <dependency>
-                <groupId>org.apache.lucene</groupId>
-                <artifactId>lucene-core</artifactId>
-                <version>${lucene.verison}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.lucene</groupId>
-                <artifactId>lucene-backward-codecs</artifactId>
-                <version>${lucene.verison}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.lucene</groupId>
-                <artifactId>lucene-analyzers-common</artifactId>
-                <version>${lucene.verison}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.lucene</groupId>
-                <artifactId>lucene-queries</artifactId>
-                <version>${lucene.verison}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.lucene</groupId>
-                <artifactId>lucene-memory</artifactId>
-                <version>${lucene.verison}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.lucene</groupId>
-                <artifactId>lucene-highlighter</artifactId>
-                <version>${lucene.verison}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.lucene</groupId>
-                <artifactId>lucene-queryparser</artifactId>
-                <version>${lucene.verison}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.lucene</groupId>
-                <artifactId>lucene-suggest</artifactId>
-                <version>${lucene.verison}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.lucene</groupId>
-                <artifactId>lucene-join</artifactId>
-                <version>${lucene.verison}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.lucene</groupId>
-                <artifactId>lucene-spatial</artifactId>
-                <version>${lucene.verison}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.lucene</groupId>
-                <artifactId>lucene-misc</artifactId>
-                <version>${lucene.verison}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.lucene</groupId>
-                <artifactId>lucene-grouping</artifactId>
-                <version>${lucene.verison}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.lucene</groupId>
-                <artifactId>lucene-sandbox</artifactId>
-                <version>${lucene.verison}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.lucene</groupId>
-                <artifactId>lucene-spatial-extras</artifactId>
-                <version>${lucene.verison}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.lucene</groupId>
-                <artifactId>lucene-spatial3d</artifactId>
-                <version>${lucene.verison}</version>
+                <groupId>org.apache.camel</groupId>
+                <artifactId>camel-parent</artifactId>
+                <version>2.22.0</version>
+                <scope>import</scope>
+                <type>pom</type>
             </dependency>
         </dependencies>
     </dependencyManagement>
 
-
     <dependencies>
         <dependency>
             <groupId>org.apache.camel</groupId>
-            <artifactId>camel-core</artifactId>
-            <version>2.19.1</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.camel</groupId>
             <artifactId>camel-spring</artifactId>
-            <version>2.19.1</version>
         </dependency>
         <dependency>
             <groupId>org.apache.camel</groupId>
             <artifactId>camel-jackson</artifactId>
-            <version>2.19.1</version>
         </dependency>
         <dependency>
             <groupId>org.apache.camel</groupId>
-            <artifactId>camel-elasticsearch5</artifactId>
-            <version>2.19.1</version>
+            <artifactId>camel-elasticsearch-rest</artifactId>
         </dependency>
     </dependencies>
 

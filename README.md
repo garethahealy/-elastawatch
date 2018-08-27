@@ -10,11 +10,11 @@ PoC to see how ElasticSearch Watcher works.
 ## Building
 This project contains everything needed to run the example:
 
-1.Firstly, build the Camel Loader:
+1. Build the Camel Loader:
 
     mvn clean install
 
-2.Then download and install ElasticSearch/Kibana with the required plugins
+2. Download and install ElasticSearch/Kibana with the required plugins
     
     ./elasticsearch/1_install.sh
     ./kibana/1_install.sh
@@ -22,24 +22,24 @@ This project contains everything needed to run the example:
 ## Running
 To run the examples, follow the below order:
 
-1.Firstly start ElasticSearch
+1. Start ElasticSearch
 
     ./elasticsearch/2_run.sh
     
-2.Then Kibana (useful for visualising the logs):
+2. Start Kibana (useful for visualising the logs):
 
     ./kibana/2_run.sh
     
-3.Now create the example watcher:
+3. Create the example watcher:
 
     ./watcher/create.sh ./watcher/example-watcher.json
 
-4.Start up the loader:
+4. Start up the loader:
 
     cd elastic-loader
     mvn camel:run
 
-5.And finally, copy the example file into the running loader:
+5. Copy the example file into the running loader:
 
     cp elastic-loader/src/main/resources/example.json elastic-loader/target/json/
 
